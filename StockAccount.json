@@ -1,0 +1,11 @@
+[ {
+  "name" : "salt",
+  "share" : 5,
+  "price" : 20.0,
+  "value" : 100.0
+}, {
+  "name" : "sugar",
+  "share" : 10,
+  "price" : 40.0,
+  "value" : 400.0
+} ]

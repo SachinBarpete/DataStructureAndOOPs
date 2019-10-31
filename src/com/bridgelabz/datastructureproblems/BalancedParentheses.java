@@ -1,4 +1,5 @@
-package com.bridgelabz.datastructure.balancedparentheses;
+package com.bridgelabz.datastructureproblems;
+
 import com.bridgelabz.datastructure.stack.*;
 
 public class BalancedParentheses {

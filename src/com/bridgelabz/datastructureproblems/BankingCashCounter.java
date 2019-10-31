@@ -1,4 +1,5 @@
-package com.bridgelabz.datastructure.bankingcashcounter;
+package com.bridgelabz.datastructureproblems;
+
 import java.util.Scanner;
 import com.bridgelabz.datastructure.queue.*;
 

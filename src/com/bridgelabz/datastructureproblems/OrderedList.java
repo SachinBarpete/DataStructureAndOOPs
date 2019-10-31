@@ -1,4 +1,4 @@
-package com.bridgelabz.datastructure.UnorderedList;
+package com.bridgelabz.datastructureproblems;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,28 +8,31 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import com.bridgelabz.datastructure.linkedlist.*;
 
-public class UnorderedList<T> {
+
+public class OrderedList<T> {
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the word to search");
-		String word = sc.nextLine();
+		System.out.println("Enter the number");
+		int num = sc.nextInt();
 
-		File file = new File("C:\\Users\\Barpete Brother's\\eclipse-workspace\\Files\\UnorderedList.txt");
+		File file = new File("C:\\Users\\Barpete Brother's\\eclipse-workspace\\Files\\OrderedList.txt");
 		try (Scanner scan = new Scanner(file)) {
-			while (scan.hasNext()) {
-				list.add(scan.next());
+			while (scan.hasNextInt()) {
+				list.add(scan.nextInt());
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
+
 		}
-		if (list.search(word)) {
-			while (list.search(word))
-				list.remove(word);
+		if (list.search(num)) {
+			while (list.search(num))
+				list.remove(num);
 		} else
-			list.add(word);
+			list.add(num);
+		list.sortList();
 		try {
-			Files.write(Paths.get("/Users/Barpete Brother's/eclipse-workspace/Files/UnorderedList.txt"),
+			Files.write(Paths.get("/Users/Barpete Brother's/eclipse-workspace/Files/OrderedList.txt"),
 					list.list().getBytes());
 		} catch (IOException e) {
 			e.printStackTrace();
